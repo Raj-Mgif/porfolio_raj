@@ -1,0 +1,135 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+  transition: all 0.4s ease;
+  padding: 24px 0;
+}
+
+.navbar.scrolled {
+  background: rgba(250, 250, 248, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navLinks a {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: opacity 0.3s ease;
+}
+
+.navLinks a:hover {
+  opacity: 0.6;
+}
+
+.hireBtn {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+}
+
+.hireBtn:hover {
+  background: var(--text-dark);
+  color: var(--text-light);
+}
+
+.mobileToggle {
+  display: none;
+  color: var(--text-dark);
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-light);
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 99;
+}
+
+.mobileNavLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.mobileNavLinks a {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: var(--text-dark);
+}
+
+.mobileHireBtn {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--text-dark);
+  padding: 12px 32px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+  .mobileToggle {
+    display: block;
+    z-index: 100;
+  }
+}

@@ -1,0 +1,239 @@
+.workSection {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  overflow: hidden; /* For clip-path animation */
+  padding: 180px 0;
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  font-style: italic;
+  margin-top: 16px;
+  color: var(--text-light);
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.projectCard {
+  border-top: 1px solid var(--border-dark);
+  padding-top: 40px;
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 40px;
+  gap: 32px;
+}
+
+.projectNumber {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  color: var(--text-light-muted);
+}
+
+.projectTitle {
+  font-family: var(--font-serif);
+  font-size: var(--fs-title);
+  flex: 1;
+}
+
+.projectCategory {
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.cardInfo {
+  flex: 1;
+  max-width: 500px;
+}
+
+.projectDesc {
+  font-size: var(--fs-body);
+  color: var(--text-light-muted);
+  margin-bottom: 32px;
+}
+
+.highlights {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.highlights li {
+  font-size: 16px;
+  color: var(--text-light);
+  position: relative;
+  padding-left: 24px;
+}
+
+.highlights li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.stackWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.techPill {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  border: 1px solid var(--border-dark);
+  border-radius: 40px;
+  color: var(--text-light-muted);
+}
+
+.metricsRow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: var(--bg-dark-card);
+  border-radius: var(--radius-sm);
+  margin-bottom: 40px;
+}
+
+.metricAccent {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.metricLabel {
+  font-size: var(--fs-small);
+  color: var(--text-light-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.linksRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.liveLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.liveLink:hover {
+  background-color: var(--text-light);
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.githubLink:hover {
+  color: var(--accent);
+}
+
+.cardImageWrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  aspect-ratio: 4 / 3;
+}
+
+.imageReveal {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark-card);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.projectCard:hover .imageReveal {
+  transform: scaleX(0.95) scaleY(0.95);
+}
+
+.projectImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.4s ease, transform 0.8s ease;
+}
+
+.projectCard:hover .projectImg {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  color: var(--border-dark);
+  font-size: 24px;
+}
+
+@media (max-width: 1024px) {
+  .cardContent {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  
+  .cardInfo {
+    max-width: 100%;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}

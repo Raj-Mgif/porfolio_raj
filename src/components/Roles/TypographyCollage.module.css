@@ -1,0 +1,63 @@
+.collageSection {
+  background-color: #1a1a1a;
+  padding: 60px 0 160px 0;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.collageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  width: 100vw;
+  overflow: visible;
+  position: relative;
+}
+
+.rowTrack {
+  display: flex;
+  width: max-content;
+  position: relative;
+}
+
+.itemBlock {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.primary {
+  font-family: var(--font-sans);
+  font-size: clamp(80px, 12vw, 180px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.secondary {
+  font-family: var(--font-sans);
+  font-size: clamp(80px, 12vw, 180px);
+  font-weight: 700;
+  color: #8c8c8c; /* Lighter grey like in the screenshot */
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.shapeDark {
+  font-size: clamp(40px, 6vw, 90px);
+  color: #333333;
+  margin: 0 40px;
+}
+
+.shapeLight {
+  font-size: clamp(40px, 6vw, 90px);
+  color: #999999;
+  margin: 0 40px;
+}
